@@ -1,6 +1,6 @@
 <?php require_once "./src/views/header.php"; ?>
 
-<div class="column is-8 is-offset-2">
+<div class="column is-12">
 
   <!-- Header -->
   <h3 class="title has-text-black">[S11] Selection BTS - Connexion</h3>
@@ -20,7 +20,7 @@
 
     <button type="submit" class="button is-block is-dark is-medium is-fullwidth">
       Connexion
-      <i class="fa fa-sign-in" aria-hidden="true"></i>
+      <i class="mdi mdi-login" aria-hidden="true"></i>
     </button>
   </form>
   <!-- ./Form -->

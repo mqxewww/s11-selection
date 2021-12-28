@@ -1,7 +1,8 @@
 # [S11] SELECTION BTS
 
 ![](https://img.shields.io/badge/php-built%20on%207.4.1-%237278AB)
-![](https://img.shields.io/badge/version-0.1.1-9cf)
+![](https://img.shields.io/badge/version-0.1.0-9cf)
+![](https://img.shields.io/badge/dynamic/json?color=%2300D1B2&label=Bulma%20CDN&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fjgthms%2Fbulma%2Fmaster%2Fpackage.json)
 
 ## FR
 
@@ -31,7 +32,8 @@ L'application est ensuite prête à être utilisée.
 
 ### Caractéristiques techniques
 
-:computer: PHP orienté objet sous architecture MVC.
+:computer: PHP orienté objet sous architecture MVC.\
+:pencil2: Framework CSS : [Bulma](https://bulma.io/documentation/overview/start/).
 
 ### À propos :information_source:
 
@@ -68,7 +70,8 @@ The application is then ready to use.
 
 ### Technical characteristics
 
-:computer: Object-oriented PHP under MVC architecture.
+:computer: Object-oriented PHP under MVC architecture.\
+:pencil2: CSS Framework : [Bulma](https://bulma.io/documentation/overview/start/).
 
 ### About :information_source:
 
