@@ -27,6 +27,10 @@ body {
   color: red;
 }
 
+.has-text-green {
+  color: green;
+}
+
 .field {
   padding-bottom: 10px;
 }

@@ -6,9 +6,18 @@
   <h3 class="title has-text-black">[S11] Selection BTS - Espace Administrateur</h3>
   <hr class="login-hr">
   <p class="subtitle has-text-black">
-    Vous pouvez consulter la liste des comptes
-    mais également les modifier à travers différents boutons.
+    Vous pouvez consulter la liste des comptes et
+    également la modifier à partir de différents boutons.
   </p>
+  <?php if (isset($_GET["created"])) : ?>
+    <p class="field is-size-5 has-text-green">Compte créé avec succès !</p>
+  <?php endif; ?>
+  <?php if (isset($_GET["modified"])) : ?>
+    <p class="field is-size-5 has-text-green">Compte modifié avec succès !</p>
+  <?php endif; ?>
+  <?php if (isset($_GET["deleted"])) : ?>
+    <p class="field is-size-5 has-text-green">Compte supprimé avec succès !</p>
+  <?php endif; ?>
   <!-- ./Header -->
 
   <!-- Main content -->
@@ -31,7 +40,7 @@
     <!-- Table -->
     <div class="column">
       <div class="box">
-        <table class="table">
+        <table class="table is-fullwidth">
           <thead>
             <tr>
               <th><abbr title="Login du compte"></abbr>Login</th>

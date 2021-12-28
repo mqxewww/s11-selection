@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 0.2.0 (...progress)
+## 0.2.0 (2021-12-28 to ...)
 
 > Second unofficial version where I modified the views with the Bulma CDN and Material Design Icons. The first full release will be 1.0.0 and should have some optimizations for setting global variables in `./config/config.php` & others.
 
@@ -12,7 +12,7 @@
 #### Updated
 
 - `./src/views/login` has complete CSS.
-- `./src/views/admin/adminHome.php` has complete CSS.
+- The 4 home pages CSS is finished.
 - `./src/views/header.php` :
   - CSS file;
   - Material Design Icon;
