@@ -1,7 +1,7 @@
-# [S11] SELECTION BTS 0.1.0
+# [S11] SELECTION BTS
 
 ![](https://img.shields.io/badge/php-built%20on%207.4.1-%237278AB)
-![](https://img.shields.io/badge/version-0.1.0-9cf)
+![](https://img.shields.io/badge/version-0.1.1-9cf)
 
 ## FR
 

@@ -1,27 +1,44 @@
 <?php require_once "./src/views/header.php"; ?>
 
-<body>
-  <h2>Selection BTS - Connexion</h2>
+<div class="column is-8 is-offset-2">
 
-  <form action="" method="POST">
-    <label for="accountLog">ID utilisateur :</label>
-    <input type="text" name="accountLog" required>
+  <!-- Header -->
+  <h3 class="title has-text-black">[S11] Selection BTS - Connexion</h3>
+  <hr class="login-hr">
+  <p class="subtitle has-text-black">Connectez vous pour accéder à l'application.</p>
+  <!-- ./Header -->
 
-    <label for="accountPwd">Mot de passe :</label>
-    <input type="password" name="accountPwd" required>
+  <!-- Form -->
+  <form action="" method="POST" class="box">
+    <div class="field">
+      <input class="input is-dark is-medium" name="accountLog" type="text" placeholder="ID utilisateur" required />
+    </div>
 
-    <button type="submit">Connexion</button>
+    <div class="field">
+      <input class="input is-dark is-medium" name="accountPwd" type="password" placeholder="Mot de passe" required />
+    </div>
+
+    <button type="submit" class="button is-block is-dark is-medium is-fullwidth">
+      Connexion
+      <i class="fa fa-sign-in" aria-hidden="true"></i>
+    </button>
   </form>
+  <!-- ./Form -->
 
+  <!-- Errors -->
   <?php if (isset($_GET["fail"])) : ?>
-    <p>Identifiants incorrects.</p>
+    <p class="field is-size-5 has-text-red">Identifiants incorrects.</p>
   <?php endif; ?>
 
   <?php if (isset($_GET["afk"])) : ?>
-    <p>Vous avez été déconnecté pour inactivité.</p>
+    <p class="field is-size-5 has-text-red">Vous avez été déconnecté pour inactivité.</p>
   <?php endif; ?>
+  <!-- ./Errors -->
 
-  <p>NOIZET Maxence - 2021</p>
-</body>
+  <!-- Footer -->
+  <p class="has-text-grey">NOIZET Maxence &nbsp;·&nbsp; 2021</p>
+  <!-- ./Footer -->
 
-</html>
+</div>
+
+<?php require_once "./src/views/footer.php"; ?>
