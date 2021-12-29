@@ -8,6 +8,7 @@ session_start();
 
 try {
   require_once "./config/config.php";
+  require_once "./config/connect.php";
 
   # User logout
   if (isset($_GET["logout"])) {
