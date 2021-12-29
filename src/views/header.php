@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Questrial&display=swap" />
   <link rel="stylesheet" href="./src/assets/css/style.css" />
-  <title>[S11] Selection BTS 0.1.0</title>
+  <title>[S11] Selection BTS 0.2.0</title>
 </head>
 
 <body>
