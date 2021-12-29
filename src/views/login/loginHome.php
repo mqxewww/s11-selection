@@ -11,11 +11,17 @@
   <!-- Form -->
   <form action="" method="POST" class="box">
     <div class="field">
-      <input class="input is-dark is-medium" name="accountLog" type="text" placeholder="ID utilisateur" required />
+      <label class="label">Identifiant</label>
+      <div class="control">
+        <input class="input is-medium" name="accountLog" type="text" placeholder="ID" required />
+      </div>
     </div>
 
     <div class="field">
-      <input class="input is-dark is-medium" name="accountPwd" type="password" placeholder="Mot de passe" required />
+      <label class="label">Mot de passe</label>
+      <div class="control">
+        <input class="input is-medium" name="accountPwd" type="password" placeholder="Pass" required />
+      </div>
     </div>
 
     <button type="submit" class="button is-block is-dark is-medium is-fullwidth">

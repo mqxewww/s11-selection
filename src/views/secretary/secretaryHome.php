@@ -3,7 +3,7 @@
 <div class="column is-12">
 
   <!-- Header -->
-  <h3 class="title has-text-black">[S11] Selection BTS - Espace Secrétaire</h3>
+  <h3 class="title has-text-black">[S11] Selection BTS - Espace Secrétaire - Accueil</h3>
   <hr class="login-hr">
   <p class="subtitle has-text-black">
     Vous pouvez consulter le classement

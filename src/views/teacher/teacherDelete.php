@@ -1,19 +1,53 @@
 <?php require_once "./src/views/header.php"; ?>
 
-<body>
-  <?php require_once "./src/views/navbar.php"; ?>
+<div class="column is-12">
 
-  <h2>Espace professeur - Suppression d'une grille</h2>
-  <p>Voulez vous vraiment supprimer la grille <?= $grid->getNumber() ?> ?</p>
+  <!-- Header -->
+  <h3 class="title has-text-black">[S11] Selection BTS - Espace Professeur - Suppression</h3>
+  <hr class="login-hr">
+  <p class="subtitle has-text-black">
+    Voulez vous vraiment supprimer la grille
+    <strong class="has-text-black"><?= $grid->getNumber() ?></strong> ?
+  </p>
+  <!-- ./Header -->
 
-  <form action="" method="POST">
-    <input hidden type="text" name="delGridId" value=<?= $grid->getId() ?>>
-    <button type="submit">Supprimer</button>
-  </form>
+  <!-- Main content -->
+  <div class="columns is-multiline">
 
-  <?php if (isset($_GET["failed"])) : ?>
-    <p>Une erreur est survenue, veuillez réessayer.</p>
-  <?php endif; ?>
-</body>
+    <!-- Buttons -->
+    <div class="column is-one-quarter">
+      <div class="box">
+        <a class="field button is-block is-dark is-medium" href="?logout">
+          Se déconnecter
+          <i class="mdi mdi-logout" aria-hidden="true"></i>
+        </a>
+        <a class="field button is-block is-dark is-medium" href="?">
+          Accueil
+          <i class="mdi mdi-home" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+    <!-- ./Buttons -->
 
-</html>
+    <!-- Form -->
+    <div class="column">
+      <form action="" method="POST" class="box">
+        <input type="text" name="delGridId" value=<?= $grid->getId() ?> hidden>
+
+        <button type="submit" class="button is-block is-dark is-medium is-fullwidth">
+          Valider la suppression
+        </button>
+      </form>
+    </div>
+    <!-- ./Form -->
+
+  </div>
+  <!-- ./Main content -->
+
+  <!-- Footer -->
+  <p class="has-text-grey">NOIZET Maxence &nbsp;·&nbsp; 2021</p>
+  <!-- ./Footer -->
+
+</div>
+
+<?php require_once "./src/views/footer.php"; ?>

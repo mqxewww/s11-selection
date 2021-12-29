@@ -1,20 +1,53 @@
 <?php require_once "./src/views/header.php"; ?>
 
-<body>
-  <?php require_once "./src/views/navbar.php"; ?>
+<div class="column is-12">
 
-  <h2>Espace administrateur - Suppression d'un compte</h2>
-  <p>Voulez vous vraiment supprimer le compte <?= $account->getLogin() ?> ?</p>
+  <!-- Header -->
+  <h3 class="title has-text-black">[S11] Selection BTS - Espace Administrateur - Suppression</h3>
+  <hr class="login-hr">
+  <p class="subtitle has-text-black">
+    Voulez vous vraiment supprimer le compte
+    <strong class="has-text-black"><?= $account->getLogin() ?></strong> ?
+  </p>
+  <!-- ./Header -->
 
-  <form action="" method="POST">
-    <input type="text" name="delAccountId" value=<?= $account->getId() ?> hidden>
+  <!-- Main content -->
+  <div class="columns is-multiline">
 
-    <button type="submit">Supprimer</button>
-  </form>
+    <!-- Buttons -->
+    <div class="column is-one-quarter">
+      <div class="box">
+        <a class="field button is-block is-dark is-medium" href="?logout">
+          Se déconnecter
+          <i class="mdi mdi-logout" aria-hidden="true"></i>
+        </a>
+        <a class="field button is-block is-dark is-medium" href="?">
+          Accueil
+          <i class="mdi mdi-home" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+    <!-- ./Buttons -->
 
-  <?php if (isset($_GET["failed"])) : ?>
-    <p>Une erreur est survenue, veuillez réessayer.</p>
-  <?php endif; ?>
-</body>
+    <!-- Form -->
+    <div class="column">
+      <form action="" method="POST" class="box">
+        <input type="text" name="delAccountId" value=<?= $account->getId() ?> hidden>
 
-</html>
+        <button type="submit" class="button is-block is-dark is-medium is-fullwidth">
+          Valider la suppression
+        </button>
+      </form>
+    </div>
+    <!-- ./Form -->
+
+  </div>
+  <!-- ./Main content -->
+
+  <!-- Footer -->
+  <p class="has-text-grey">NOIZET Maxence &nbsp;·&nbsp; 2021</p>
+  <!-- ./Footer -->
+
+</div>
+
+<?php require_once "./src/views/footer.php"; ?>

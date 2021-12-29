@@ -3,7 +3,7 @@
 <div class="column is-12">
 
   <!-- Header -->
-  <h3 class="title has-text-black">[S11] Selection BTS - Espace Professeur</h3>
+  <h3 class="title has-text-black">[S11] Selection BTS - Espace Professeur - Accueil</h3>
   <hr class="login-hr">
   <p class="subtitle has-text-black">
     Vous pouvez consulter la liste des grilles d'évaluation
@@ -22,12 +22,17 @@
 
   <!-- Main content -->
   <div class="columns is-multiline">
+
     <!-- Buttons -->
     <div class="column is-one-quarter">
       <div class="box">
         <a class="field button is-block is-dark is-medium" href="?logout">
           Se déconnecter
           <i class="mdi mdi-logout" aria-hidden="true"></i>
+        </a>
+        <a class="field button is-block is-dark is-medium" href="?">
+          Accueil
+          <i class="mdi mdi-home" aria-hidden="true"></i>
         </a>
         <a class="field button is-block is-dark is-medium" href="?create">
           Nouvelle grille
@@ -80,6 +85,10 @@
 
   </div>
   <!-- ./Main content -->
+
+  <!-- Footer -->
+  <p class="has-text-grey">NOIZET Maxence &nbsp;·&nbsp; 2021</p>
+  <!-- ./Footer -->
 
 </div>
 

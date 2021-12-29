@@ -11,13 +11,16 @@
 
 #### Updated
 
-- `./src/views/login` has complete CSS.
-- The 4 home pages CSS is finished.
+- Complete CSS for the whole application (`./src/views`).
 - `./src/views/header.php` :
   - CSS file;
   - Material Design Icon;
   - Questrial Google Font;
   - First common ```<div>``` tags;
+
+#### Removed
+
+- `./src/views/navbar.php`;
 
 ## 0.1.0 (2021-12-26)
 
