@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 0.2.0 (2021-12-28 to ...)
+## 0.2.0 (2021-12-28 to 2021-12-29)
 
 > Second unofficial version where I modified the views with the Bulma CDN and Material Design Icons. The first full release will be 1.0.0 and should have some optimizations for setting global variables in `./config/config.php` & others.
 
