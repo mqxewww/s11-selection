@@ -13,7 +13,7 @@ try {
   # User logout
   if (isset($_GET["logout"])) {
     session_destroy();
-    header("Location: ?");
+    header("Location: /");
     exit;
   }
 
@@ -21,7 +21,7 @@ try {
   // Identified user
   //-----------------------------------------------------
 
-  if (isset($_SESSION["auth"]) && isset($_SESSION["timestamp"])) {
+  if (isset($_SESSION["auth"]) && !empty($_SESSION["auth"]) && isset($_SESSION["timestamp"]) && !empty($_SESSION["timestamp"])) {
 
     # Expired session
     if (time() - $_SESSION["timestamp"] > 1200) {

@@ -29,7 +29,7 @@
           Se déconnecter
           <i class="mdi mdi-logout" aria-hidden="true"></i>
         </a>
-        <a class="field button is-block is-dark is-medium" href="?">
+        <a class="field button is-block is-dark is-medium" href="/">
           Accueil
           <i class="mdi mdi-home" aria-hidden="true"></i>
         </a>

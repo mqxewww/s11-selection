@@ -23,7 +23,7 @@ $ppview = htmlspecialchars($_POST["modGridPpview"]);
 $proview = htmlspecialchars($_POST["modGridProview"]);
 $coverletter = htmlspecialchars($_POST["modGridCoverletter"]);
 $comment = htmlspecialchars($_POST["modGridComment"]);
-$mark = $work + $abs + $att + $study + $ppview + $proview + $coverletter;
+$mark = $diploma + $work + $abs + $att + $study + $ppview + $proview + $coverletter;
 
 $grid = new Grid([
   "id" => intval($id),
@@ -42,14 +42,12 @@ $grid = new Grid([
   "mark" => $mark
 ]);
 
-$manager->updateGrid($grid);
-
-/* try {
+try {
   $manager->updateGrid($grid);
 } catch (Exception $e) {
   header("Location: ?update&gridId=" . $_GET["gridId"] . "&failed");
   exit;
-} */
+}
 
 header("Location: ?modified");
 exit;

@@ -1,6 +1,6 @@
 # [S11] SELECTION BTS
 
-![](https://img.shields.io/badge/php-built%20on%207.4.1-%237278AB)
+![](https://img.shields.io/badge/php-%3E%3D%208.0.13-%37278AB)
 ![](https://img.shields.io/badge/version-0.2.1-9cf)
 ![](https://img.shields.io/badge/dynamic/json?color=%2300D1B2&label=Bulma%20CDN&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fjgthms%2Fbulma%2Fmaster%2Fpackage.json)
 

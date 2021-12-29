@@ -2,8 +2,8 @@
 -- version 4.9.5
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3307
--- Generation Time: Dec 26, 2021 at 02:49 PM
+-- Host: localhost:3308
+-- Generation Time: Dec 29, 2021 at 06:12 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -72,7 +72,7 @@ CREATE TABLE `grid` (
 --
 
 INSERT INTO `grid` (`id`, `number`, `name`, `firstname`, `diploma`, `work`, `absence`, `attitude`, `study`, `ppview`, `proview`, `coverletter`, `comment`, `mark`) VALUES
-(2, '#001', 'NOIZET', 'Maxence', 8, 1, 0, 0, 0, 2, 2, 1, 'Javascript enjoyer', 14);
+(2, '#001', 'NOIZET', 'Maxence', 8, 1, 0, 0, 0, 2, 2, 1, 'Hello its me', 14);
 
 --
 -- Indexes for dumped tables
@@ -100,13 +100,13 @@ ALTER TABLE `grid`
 -- AUTO_INCREMENT for table `account`
 --
 ALTER TABLE `account`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `grid`
 --
 ALTER TABLE `grid`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

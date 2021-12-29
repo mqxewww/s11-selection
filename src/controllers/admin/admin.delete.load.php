@@ -19,7 +19,7 @@ try {
 
   $account = $manager->getOne(intval($id));
 } catch (Exception $e) {
-  header("Location: ?");
+  header("Location: /");
   exit;
 }
 

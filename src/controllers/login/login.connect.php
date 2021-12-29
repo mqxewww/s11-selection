@@ -25,5 +25,5 @@ try {
   exit;
 }
 
-header("Location: ?");
+header("Location: /");
 exit;
