@@ -100,7 +100,7 @@ The application is then ready to use.
 ### Technical characteristics
 
 :computer: Object-oriented PHP under MVC architecture.\
-:pencil2: CSS Framework : [Bulma](https://bulma.io/documentation/overview/start/).
+:pencil2: CSS Framework : [Bulma](https://bulma.io/documentation/overview/start/).\
 :arrow_forward: App icon : [Grille Icons8](https://icons8.com/icon/64044/grille).
 
 ### About :information_source:
