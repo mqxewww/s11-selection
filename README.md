@@ -1,8 +1,8 @@
 # [S11] SELECTION BTS
 
-![](https://img.shields.io/badge/php-built%20on%207.4.1-%237278AB)
-![](https://img.shields.io/badge/version-0.2.0-9cf)
-![](https://img.shields.io/badge/dynamic/json?color=%2300D1B2&label=Bulma%20CDN&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fjgthms%2Fbulma%2Fmaster%2Fpackage.json)
+[![PHP Version](https://img.shields.io/badge/php-%3E%3D%208.0.13-%37278AB)](https://www.php.net/)
+[![Application Version](https://img.shields.io/badge/version-1.0.0-9cf)](https://github.com/25thMaxouuu/s11-selection)
+[![Bulma Version](https://img.shields.io/badge/dynamic/json?color=%2300D1B2&label=Bulma&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fjgthms%2Fbulma%2Fmaster%2Fpackage.json)](https://bulma.io/)
 
 ## FR
 
@@ -12,8 +12,22 @@ S11 Selection est une solution web PHP faite pour automatiser la création d'une
 
 ### Installation
 
-Un template de la base de donnée prêt à importer est disponible dans `./database/selection.sql`. Les 3 comptes sont `admin@admin`, `teacher@teacher` & `secr@secr`.\
-Modifiez ensuite les variables dans `./config/config.php` pour pouvoir vous connecter à votre serveur MySQL.\
+> PHP 8 ou + est requis !
+
+Un template de la base de donnée prêt à importer est disponible dans `./docs/selection.sql`. Les 3 comptes sont `admin@admin`, `teacher@teacher` & `secr@secr`.\
+Créez ensuite un fichier nommé `config.php` dans `./config` et copiez coller y le code suivant :
+
+```php
+<?php
+
+define("DB_HOST", "");
+define("DB_NAME", "");
+define("DB_USER", "");
+define("DB_PWD", "");
+
+```
+
+Complétez les valeurs par vos données personnelles. Le fichier est ajoutée dans `.gitignore`, vos informations resteront en local.
 L'application est ensuite prête à être utilisée.
 
 ### Caractéristiques :page_facing_up:
@@ -33,7 +47,8 @@ L'application est ensuite prête à être utilisée.
 ### Caractéristiques techniques
 
 :computer: PHP orienté objet sous architecture MVC.\
-:pencil2: Framework CSS : [Bulma](https://bulma.io/documentation/overview/start/).
+:pencil2: Framework CSS : [Bulma](https://bulma.io/documentation/overview/start/).\
+:arrow_forward: Icone de l'application : [Grille Icons8](https://icons8.com/icon/64044/grille).
 
 ### À propos :information_source:
 
@@ -50,8 +65,22 @@ S11 Selection is a PHP web solution designed to automate the creation of a stude
 
 ### Setup
 
-A ready-to-import database template is available in `./database/selection.sql`. The 3 accounts are `admin@admin` & `teacher@teacher` & `secr@secr`.\
-Then modify the variables in `./config/config.php` so that you can connect to your MySQL server.\
+> PHP 8 or higher is required !
+
+A ready-to-import database template is available in `./docs/selection.sql`. The 3 accounts are `admin@admin` & `teacher@teacher` & `secr@secr`.\
+Then create a file named `config.php` in `./config` and copy and paste the following code:
+
+```php
+<?php
+
+define("DB_HOST", "");
+define("DB_NAME", "");
+define("DB_USER", "");
+define("DB_PWD", "");
+
+```
+
+Fill in the values with your personal data. The file is added in `.gitignore`, your information will remain in local.
 The application is then ready to use.
 
 ### Features :page_facing_up:
@@ -71,7 +100,8 @@ The application is then ready to use.
 ### Technical characteristics
 
 :computer: Object-oriented PHP under MVC architecture.\
-:pencil2: CSS Framework : [Bulma](https://bulma.io/documentation/overview/start/).
+:pencil2: CSS Framework : [Bulma](https://bulma.io/documentation/overview/start/).\
+:arrow_forward: App icon : [Grille Icons8](https://icons8.com/icon/64044/grille).
 
 ### About :information_source:
 
