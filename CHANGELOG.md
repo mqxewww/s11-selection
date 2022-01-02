@@ -1,16 +1,19 @@
 # CHANGELOG
 
-## 0.2.1 (2021-12-29)
+## 1.0.0 (2021-12-29 to 2022-01-02)
 
-> Changes to connect to the DB, global variables are separated in another file, added in `./.gitignore`. The indications have been updated in `./README.md`.
+> First full version of the application. Many changes like the switch to PHP8, the database connection, optimization and security, and others... Indications have been updated in `./README.md`.
 
 #### Updated
 
+- PHP Version 7.4.1 to 8.0.13 or higher ;
 - `./config` :
   - `./connect.php` has no more global variables,
   - Global variables should be in `./config.php`, file you have to create when you clone the repository,
 - `./database` is now `./docs` ;
-- `./README.md` & `./index.php`.
+- `./index.php` now has more explanation about the controller selection. The folder tree has been updated to match ;
+- Errors are now handled one by one to get an appropriate message. They no longer go through $_GET but through $_SESSION.
+
 
 ## 0.2.0 (2021-12-28 to 2021-12-29)
 

@@ -134,4 +134,22 @@ class GridManager
     );
     $stmt->execute(["id" => $id]);
   }
+
+  /**
+   * Verify if new grid number is available
+   * @param string $num New grid number
+   * @return true|false
+   */
+  public function isNumberAvailable(string $num)
+  {
+    $stmt = $this->database->prepare("SELECT * FROM grid");
+    $stmt->execute();
+
+    foreach ($stmt as $row) {
+      $grid = new Grid($row);
+      if ($grid->getNumber() === $num) return false;
+    }
+
+    return true;
+  }
 }

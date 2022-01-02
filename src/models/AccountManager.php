@@ -48,7 +48,7 @@ class AccountManager
     foreach ($stmt as $row) $account = new Account($row);
 
     # Account not found
-    if (!isset($account)) throw new Exception();
+    if (!isset($account)) throw new Exception("Le compte est introuvable.");
 
     return $account;
   }
@@ -121,10 +121,28 @@ class AccountManager
 
     foreach ($stmt as $row) $account = new Account($row);
 
-    if (!isset($account)) throw new Exception();
+    if (!isset($account)) throw new Exception("Le login est incorrect.");
 
-    if (!password_verify($pass, $account->getPassword())) throw new Exception();
+    if (!password_verify($pass, $account->getPassword())) throw new Exception("Le mot de passe est incorrect.");
 
     return $account;
+  }
+
+  /**
+   * Verify if new user login is available
+   * @param string $log New account login
+   * @return true|false
+   */
+  public function isLoginAvailable(string $log)
+  {
+    $stmt = $this->database->prepare("SELECT * FROM account");
+    $stmt->execute();
+
+    foreach ($stmt as $row) {
+      $account = new Account($row);
+      if ($account->getLogin() === $log) return false;
+    }
+
+    return true;
   }
 }
