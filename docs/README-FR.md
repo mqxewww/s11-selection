@@ -1,8 +1,12 @@
 # [S11] SELECTION BTS
 
-[![Application Version](https://img.shields.io/badge/version-1.0.0-9cf)](https://github.com/25thMaxouuu/s11-selection)
-[![PHP Version](https://img.shields.io/badge/php-%3E%3D%208.0.13-%37278AB)](https://www.php.net/)
-[![Bulma Version](https://img.shields.io/badge/dynamic/json?color=%2300D1B2&label=Bulma&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fjgthms%2Fbulma%2Fmaster%2Fpackage.json)](https://bulma.io/)
+<p align="center"><a href="https://github.com/25thMaxouuu/s11-selection" target="_blank" rel="noopener noreferrer"><img width="100" src="../src/assets/images/icones8-favicon.png"></a></p>
+
+<p align="center">
+   <a href="https://github.com/25thMaxouuu/s11-selection"><img src="https://img.shields.io/badge/version-1.0.0-9cf" alt="Application Version" /><a>
+   <a href="https://php.net/"><img src="https://img.shields.io/badge/php-%3E%3D%208.0.13-%37278AB" alt="PHP Version" /><a>
+   <a href="https://bulma.io/"><img src="https://img.shields.io/badge/dynamic/json?color=%2300D1B2&label=Bulma&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fjgthms%2Fbulma%2Fmaster%2Fpackage.json" alt="Bulma Version" /><a>
+</p>
 
 ## Description
 
@@ -25,8 +29,7 @@ define("DB_PWD", "");
 
 ```
 
-Complétez les valeurs par vos données personnelles. Le fichier est ajoutée dans `.gitignore`, vos informations resteront en local.
-L'application est ensuite prête à être utilisée.
+Complétez les valeurs par vos données personnelles. L'application est ensuite prête à être utilisée.
 
 ## Caractéristiques
 
