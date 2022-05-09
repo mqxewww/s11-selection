@@ -48,4 +48,7 @@ $router->register("/admin/updateAccount", ["Selection\Controllers\AdminControlle
 $router->register("/admin/deletion", ["Selection\Controllers\AdminController", "deletion", "Selection\Middlewares\AdminMiddleware"]);
 $router->register("/admin/deleteAccount", ["Selection\Controllers\AdminController", "deleteAccount", "Selection\Middlewares\AdminMiddleware"]);
 
+$router->register("/secretary/home", ["Selection\Controllers\SecretaryController", "home", "Selection\Middlewares\SecretaryMiddleware"]);
+$router->register("/secretary/download", ["Selection\Controllers\SecretaryController", "download", "Selection\Middlewares\SecretaryMiddleware"]);
+
 (new App($router, $_SERVER['REQUEST_URI']))->start();
