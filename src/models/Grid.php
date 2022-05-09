@@ -1,25 +1,23 @@
 <?php
 
-//======================================================================
-// GRID CLASS
-//======================================================================
+namespace Selection\Models;
 
 class Grid
 {
-  protected $id;
-  protected $number;
-  protected $name;
-  protected $firstname;
-  protected $diploma;
-  protected $work;
-  protected $absence;
-  protected $attitude;
-  protected $study;
-  protected $ppview;
-  protected $proview;
-  protected $coverletter;
-  protected $comment;
-  protected $mark;
+  protected int $id;
+  protected string $number;
+  protected string $name;
+  protected string $firstname;
+  protected int $diploma;
+  protected int $work;
+  protected int $absence;
+  protected int $attitude;
+  protected int $study;
+  protected int $ppview;
+  protected int $proview;
+  protected int $coverletter;
+  protected string $comment;
+  protected int $mark;
 
   public function __construct(array $data)
   {
@@ -29,150 +27,170 @@ class Grid
     }
   }
 
-  //-----------------------------------------------------
-  // Getters
-  //-----------------------------------------------------
-
-  public function getId()
+  /** `Getter` id. */
+  public function getId(): int
   {
     return $this->id;
   }
 
-  public function getNumber()
+  /** `Getter` number. */
+  public function getNumber(): string
   {
     return $this->number;
   }
 
-  public function getName()
+  /** `Getter` name. */
+  public function getName(): string
   {
     return $this->name;
   }
 
-  public function getFirstname()
+  /** `Getter` firstname. */
+  public function getFirstname(): string
   {
     return $this->firstname;
   }
 
-  public function getDiploma()
+  /** `Getter` diploma. */
+  public function getDiploma(): int
   {
     return $this->diploma;
   }
 
-  public function getWork()
+  /** `Getter` work. */
+  public function getWork(): int
   {
     return $this->work;
   }
 
-  public function getAbsence()
+  /** `Getter` absence. */
+  public function getAbsence(): int
   {
     return $this->absence;
   }
 
-  public function getAttitude()
+  /** `Getter` attitude. */
+  public function getAttitude(): int
   {
     return $this->attitude;
   }
 
-  public function getStudy()
+  /** `Getter` study. */
+  public function getStudy(): int
   {
     return $this->study;
   }
 
-  public function getPpview()
+  /** `Getter` ppview. */
+  public function getPpview(): int
   {
     return $this->ppview;
   }
 
-  public function getProview()
+  /** `Getter` proview. */
+  public function getProview(): int
   {
     return $this->proview;
   }
 
-  public function getCoverletter()
+  /** `Getter` coverletter. */
+  public function getCoverletter(): int
   {
     return $this->coverletter;
   }
 
-  public function getComment()
+  /** `Getter` comment. */
+  public function getComment(): string
   {
     return $this->comment;
   }
 
-  public function getMark()
+  /** `Getter` mark. */
+  public function getMark(): int
   {
     return $this->mark;
   }
 
-  //-----------------------------------------------------
-  // Setters
-  //-----------------------------------------------------
-
-  public function setId(int $id)
+  /** `Setter` id. */
+  public function setId(int $id): void
   {
     $this->id = $id;
   }
 
-  public function setNumber(string $number)
+  /** `Setter` number. */
+  public function setNumber(string $number): void
   {
     $this->number = $number;
   }
 
-  public function setName(string $name)
+  /** `Setter` name. */
+  public function setName(string $name): void
   {
     $this->name = $name;
   }
 
-  public function setFirstname(string $firstname)
+  /** `Setter` firstname. */
+  public function setFirstname(string $firstname): void
   {
     $this->firstname = $firstname;
   }
 
-  public function setDiploma(int $diploma)
+  /** `Setter` diploma. */
+  public function setDiploma(int $diploma): void
   {
     $this->diploma = $diploma;
   }
 
-  public function setWork(int $work)
+  /** `Setter` work. */
+  public function setWork(int $work): void
   {
     $this->work = $work;
   }
 
-  public function setAbsence(int $absence)
+  /** `Setter` absence. */
+  public function setAbsence(int $absence): void
   {
     $this->absence = $absence;
   }
 
-  public function setAttitude(int $attitude)
+  /** `Setter` attitude. */
+  public function setAttitude(int $attitude): void
   {
     $this->attitude = $attitude;
   }
 
-  public function setStudy(int $study)
+  /** `Setter` study. */
+  public function setStudy(int $study): void
   {
     $this->study = $study;
   }
 
-  public function setPpview(int $ppview)
+  /** `Setter` ppview. */
+  public function setPpview(int $ppview): void
   {
     $this->ppview = $ppview;
   }
 
-  public function setProview(int $proview)
+  /** `Setter` proview. */
+  public function setProview(int $proview): void
   {
     $this->proview = $proview;
   }
 
-  public function setCoverletter(int $coverletter)
+  /** `Setter` coverletter. */
+  public function setCoverletter(int $coverletter): void
   {
     $this->coverletter = $coverletter;
   }
 
-  public function setComment(string $comment)
+  /** `Setter` comment. */
+  public function setComment(string $comment): void
   {
     $this->comment = $comment;
   }
 
-  public function setMark(int $mark)
+  /** `Setter` mark. */
+  public function setMark(int $mark): void
   {
     $this->mark = $mark;
   }

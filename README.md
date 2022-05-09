@@ -1,6 +1,6 @@
 # [S11] SELECTION BTS
 
-[![Application Version](https://img.shields.io/badge/version-1.0.0-9cf)](https://github.com/25thMaxouuu/s11-selection)
+[![Application Version](https://img.shields.io/badge/version-1.0.1-9cf)](https://github.com/25thMaxouuu/s11-selection)
 [![PHP Version](https://img.shields.io/badge/php-%3E%3D%208.0.13-%37278AB)](https://www.php.net/)
 [![Bulma Version](https://img.shields.io/badge/dynamic/json?color=%2300D1B2&label=Bulma&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fjgthms%2Fbulma%2Fmaster%2Fpackage.json)](https://bulma.io/)
 

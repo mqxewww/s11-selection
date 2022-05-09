@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 1.0.1 (2022-04-02)
+
+> Index.php file and assets folder moved to the new public folder. Added .htaccess file.
+
+### 1.0.1 Added
+
+- `./public` folder.
+
 ## 1.0.0 (2021-12-29 to 2022-01-02)
 
 > First full version of the application. Many changes like the switch to PHP8, the database connection, optimization and security, and others... Indications have been updated in `./README.md`.
