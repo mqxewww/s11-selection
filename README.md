@@ -1,9 +1,9 @@
 # [S11] SELECTION BTS
 
-<p align="center"><a href="https://github.com/25thMaxouuu/s11-selection" target="_blank" rel="noopener noreferrer"><img width="100" src="./src/assets/images/icones8-favicon.png"></a></p>
+<p align="center"><a href="https://github.com/25thMaxouuu/s11-selection" target="_blank" rel="noopener noreferrer"><img width="100" src="./public/assets/images/icones8-favicon.png"></a></p>
 
 <p align="center">
-   <a href="https://github.com/25thMaxouuu/s11-selection"><img src="https://img.shields.io/badge/version-1.0.0-9cf" alt="Application Version" /><a>
+   <a href="https://github.com/25thMaxouuu/s11-selection"><img src="https://img.shields.io/badge/version-1.1.0-9cf" alt="Application Version" /><a>
    <a href="https://php.net/"><img src="https://img.shields.io/badge/php-%3E%3D%208.0.13-%37278AB" alt="PHP Version" /><a>
    <a href="https://bulma.io/"><img src="https://img.shields.io/badge/dynamic/json?color=%2300D1B2&label=Bulma&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fjgthms%2Fbulma%2Fmaster%2Fpackage.json" alt="Bulma Version" /><a>
 </p>
@@ -42,19 +42,19 @@ The application is then ready to use.
 ### Authentication page
 
 <p align="center">
-   <img alt="Authentication page" width="700" src="./README-PICTURES/auth-home.jpg">
+   <img alt="Authentication page" width="700" src="./docs/README-PICTURES/auth-home.jpg">
 </p>
 
 ### Home page example
 
 <p align="center">
-   <img alt="Home page example" width="700" src="./README-PICTURES/home-example.jpg">
+   <img alt="Home page example" width="700" src="./docs/README-PICTURES/home-example.jpg">
 </p>
 
 ### Form example
 
 <p align="center">
-   <img alt="Form example" width="700" src="./README-PICTURES/form-example.jpg">
+   <img alt="Form example" width="700" src="./docs/README-PICTURES/form-example.jpg">
 </p>
 
 ## Technical characteristics
