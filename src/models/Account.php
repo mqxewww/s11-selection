@@ -1,15 +1,13 @@
 <?php
 
-//======================================================================
-// ACCOUNT CLASS
-//======================================================================
+namespace Selection\Models;
 
 class Account
 {
-  protected $id;
-  protected $login;
-  protected $password;
-  protected $type;
+  protected int $id;
+  protected string $login;
+  protected string $password;
+  protected string $type;
 
   public function __construct(array $data)
   {
@@ -19,50 +17,50 @@ class Account
     }
   }
 
-  //-----------------------------------------------------
-  // Getters
-  //-----------------------------------------------------
-
-  public function getId()
+  /** `Getter` id. */
+  public function getId(): int
   {
     return $this->id;
   }
 
-  public function getLogin()
+  /** `Getter` login. */
+  public function getLogin(): string
   {
     return $this->login;
   }
 
-  public function getPassword()
+  /** `Getter` password. */
+  public function getPassword(): string
   {
     return $this->password;
   }
 
-  public function getType()
+  /** `Getter` type. */
+  public function getType(): string
   {
     return $this->type;
   }
 
-  //-----------------------------------------------------
-  // Setters
-  //-----------------------------------------------------
-
-  public function setId(int $id)
+  /** `Setter` id. */
+  public function setId(int $id): void
   {
     $this->id = $id;
   }
 
-  public function setLogin(string $login)
+  /** `Setter` login. */
+  public function setLogin(string $login): void
   {
     $this->login = $login;
   }
 
-  public function setPassword(string $password)
+  /** `Setter` password. */
+  public function setPassword(string $password): void
   {
     $this->password = $password;
   }
 
-  public function setType(string $type)
+  /** `Setter` type. */
+  public function setType(string $type): void
   {
     $this->type = $type;
   }

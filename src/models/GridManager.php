@@ -1,155 +1,178 @@
 <?php
 
-//======================================================================
-// GRID MANAGER CLASS
-//======================================================================
+namespace Selection\Models;
 
-class GridManager
+use PDOException;
+use Selection\Errors\DatabaseError;
+use Selection\Errors\InvalidInput;
+use Selection\Models\Base\Manager;
+
+class GridManager extends Manager
 {
-  protected $database;
-
-  public function __construct(PDO $db)
-  {
-    $this->database = $db;
-  }
-
   /**
-   * Selects all rows of the database's grid table and creates a Grid for each.
-   * End by returning the created Grid array.
-   * @return \Grid[]
+   * Returns all grid table rows in Grid classes.
+   * @return array
+   * @throws DatabaseError
    */
-  public function getList()
+  public function getList(): array
   {
-    $stmt = $this->database->prepare("SELECT * FROM grid ORDER BY mark DESC");
-    $stmt->execute();
+    try {
+      $stmt = $this->getDb()->prepare("SELECT * FROM grid ORDER BY mark DESC");
+      $stmt->execute();
+    } catch (PDOException $e) {
+      throw new DatabaseError($e->getMessage());
+    }
 
     foreach ($stmt as $row) $grids[] = new Grid($row);
 
-    return (isset($grids))
-      ? $grids
-      : array();
+    return (isset($grids)) ? $grids : array();
   }
 
   /**
-   * Selects one row of the database's grid table and creates an Grid.
-   * End by returning the created Grid.
-   * @param int $id Grid id
-   * @return \Grid
+   * Returns a row from the grid table into a class Grid.
+   * @param \int $id Grid id.
+   * @return Grid
+   * @throws DatabaseError|InvalidInput
    */
-  public function getOne(int $id)
+  public function getOne(int $id): Grid
   {
-    $stmt = $this->database->prepare(
-      "SELECT * FROM grid
-      WHERE id = :id
-      LIMIT 1"
-    );
-    $stmt->execute(["id" => $id]);
+    try {
+      $stmt = $this->getDb()->prepare(
+        "SELECT * FROM grid
+        WHERE id = :id
+        LIMIT 1"
+      );
+      $stmt->execute(["id" => $id]);
+    } catch (PDOException $e) {
+      throw new DatabaseError($e->getMessage());
+    }
 
     foreach ($stmt as $row) $grid = new Grid($row);
 
     # Grid not found
-    if (!isset($grid)) throw new Exception();
+    if (!isset($grid)) throw new InvalidInput("Grille");
 
     return $grid;
   }
 
   /**
    * Create a new row in the database's grid table.
-   * @param Grid $grid New grid ($id not required)
+   * @param Grid $grid New grid ($id not required).
+   * @return void
+   * @throws DatabaseError
    */
-  public function createGrid(Grid $grid)
+  public function createGrid(Grid $grid): void
   {
-    $stmt = $this->database->prepare(
-      "INSERT INTO grid(number, name, firstname, diploma, work, absence, attitude, study, ppview, proview, coverletter, comment, mark)
-      VALUES(:num, :name, :firstname, :diploma, :work, :abs, :att, :study, :pp, :pro, :cl, :comment, :mark)"
-    );
-    $stmt->execute([
-      "num" => $grid->getNumber(),
-      "name" => $grid->getName(),
-      "firstname" => $grid->getFirstname(),
-      "diploma" => $grid->getDiploma(),
-      "work" => $grid->getWork(),
-      "abs" => $grid->getAbsence(),
-      "att" => $grid->getAttitude(),
-      "study" => $grid->getStudy(),
-      "pp" => $grid->getPpview(),
-      "pro" => $grid->getProview(),
-      "cl" => $grid->getCoverletter(),
-      "comment" => $grid->getComment(),
-      "mark" => $grid->getMark()
-    ]);
+    try {
+      $stmt = $this->getDb()->prepare(
+        "INSERT INTO grid(number, name, firstname, diploma, work, absence, attitude, study, ppview, proview, coverletter, comment, mark)
+        VALUES(:num, :name, :firstname, :diploma, :work, :abs, :att, :study, :pp, :pro, :cl, :comment, :mark)"
+      );
+      $stmt->execute([
+        "num" => $grid->getNumber(),
+        "name" => $grid->getName(),
+        "firstname" => $grid->getFirstname(),
+        "diploma" => $grid->getDiploma(),
+        "work" => $grid->getWork(),
+        "abs" => $grid->getAbsence(),
+        "att" => $grid->getAttitude(),
+        "study" => $grid->getStudy(),
+        "pp" => $grid->getPpview(),
+        "pro" => $grid->getProview(),
+        "cl" => $grid->getCoverletter(),
+        "comment" => $grid->getComment(),
+        "mark" => $grid->getMark()
+      ]);
+    } catch (PDOException $e) {
+      throw new DatabaseError($e->getMessage());
+    }
   }
 
   /**
    * Update an existing row in the database's grid table.
-   * @param Grid $grid Grid informations
+   * @param Grid $grid Grid informations.
+   * @return void
+   * @throws DatabaseError
    */
-  public function updateGrid(Grid $grid)
+  public function updateGrid(Grid $grid): void
   {
-    $stmt = $this->database->prepare(
-      "UPDATE grid
-      SET
-        number = :num,
-        name = :name,
-        firstname = :firstname,
-        diploma = :diploma,
-        work = :work,
-        absence = :abs,
-        attitude = :att,
-        study = :study,
-        ppview = :pp,
-        proview = :pro,
-        coverletter = :cl,
-        comment = :comment,
-        mark = :mark
-      WHERE id = :id"
-    );
-    $stmt->execute([
-      "id" => $grid->getId(),
-      "num" => $grid->getNumber(),
-      "name" => $grid->getName(),
-      "firstname" => $grid->getFirstname(),
-      "diploma" => $grid->getDiploma(),
-      "work" => $grid->getWork(),
-      "abs" => $grid->getAbsence(),
-      "att" => $grid->getAttitude(),
-      "study" => $grid->getStudy(),
-      "pp" => $grid->getPpview(),
-      "pro" => $grid->getProview(),
-      "cl" => $grid->getCoverletter(),
-      "comment" => $grid->getComment(),
-      "mark" => $grid->getMark()
-    ]);
+    try {
+      $stmt = $this->getDb()->prepare(
+        "UPDATE grid
+        SET
+          number = :num,
+          name = :name,
+          firstname = :firstname,
+          diploma = :diploma,
+          work = :work,
+          absence = :abs,
+          attitude = :att,
+          study = :study,
+          ppview = :pp,
+          proview = :pro,
+          coverletter = :cl,
+          comment = :comment,
+          mark = :mark
+        WHERE id = :id"
+      );
+      $stmt->execute([
+        "id" => $grid->getId(),
+        "num" => $grid->getNumber(),
+        "name" => $grid->getName(),
+        "firstname" => $grid->getFirstname(),
+        "diploma" => $grid->getDiploma(),
+        "work" => $grid->getWork(),
+        "abs" => $grid->getAbsence(),
+        "att" => $grid->getAttitude(),
+        "study" => $grid->getStudy(),
+        "pp" => $grid->getPpview(),
+        "pro" => $grid->getProview(),
+        "cl" => $grid->getCoverletter(),
+        "comment" => $grid->getComment(),
+        "mark" => $grid->getMark()
+      ]);
+    } catch (PDOException $e) {
+      throw new DatabaseError($e->getMessage());
+    }
   }
 
   /**
    * Delete an existing row in the database's grid table.
-   * @param int $id Grid id
+   * @param int $id Grid id.
+   * @return void
+   * @throws DatabaseError
    */
-  public function deleteGrid(int $id)
+  public function deleteGrid(int $id): void
   {
-    $stmt = $this->database->prepare(
-      "DELETE from grid
-      WHERE id = :id"
-    );
-    $stmt->execute(["id" => $id]);
+    try {
+      $stmt = $this->getDb()->prepare(
+        "DELETE from grid
+        WHERE id = :id"
+      );
+      $stmt->execute(["id" => $id]);
+    } catch (PDOException $e) {
+      throw new DatabaseError($e->getMessage());
+    }
   }
 
   /**
-   * Verify if new grid number is available
-   * @param string $num New grid number
-   * @return true|false
+   * Verify if new grid number is available.
+   * @param string $num New grid number.
+   * @return void
+   * @throws DatabaseError|InvalidInput
    */
-  public function isNumberAvailable(string $num)
+  public function verifyNumber(string $num): void
   {
-    $stmt = $this->database->prepare("SELECT * FROM grid");
-    $stmt->execute();
+    try {
+      $stmt = $this->getDb()->prepare("SELECT * FROM grid");
+      $stmt->execute();
+    } catch (PDOException $e) {
+      throw new DatabaseError($e->getMessage());
+    }
 
     foreach ($stmt as $row) {
       $grid = new Grid($row);
-      if ($grid->getNumber() === $num) return false;
+      if ($grid->getNumber() === $num) throw new InvalidInput("Numéro");
     }
-
-    return true;
   }
 }
