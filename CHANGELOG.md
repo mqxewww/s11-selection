@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.1.0 (2022-05-11)
+
+> Application restructuring and use of composer for auto-loader and environment variables.
+
 ## 1.0.1 (2022-04-02)
 
 > Index.php file and assets folder moved to the new public folder. Added .htaccess file.

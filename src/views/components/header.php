@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Questrial&display=swap" />
   <link rel="stylesheet" href="<?= $_ENV["WEB_URL"] . "assets/css/style.css" ?>" />
-  <title>[S11] Selection BTS <?= $_ENV["APP_VERSION"] ?></title>
+  <title>[S11] Selection BTS <?= APP_VERSION ?></title>
 </head>
 
 <body>

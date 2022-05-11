@@ -5,6 +5,7 @@ namespace Selection\Libs;
 use Selection\Errors\InvalidActionException;
 use Selection\Errors\InvalidInput;
 use Selection\Errors\RouteNotFoundException;
+use Selection\Libs\Router;
 
 class App
 {
@@ -42,8 +43,8 @@ class App
 
   /**
    * `APP` Returns a $_POST variable if it exists.
-   * @param \string $varName Variable name.
-   * @param \string $inputName Input name (displayed in case of error).
+   * @param string $varName Variable name.
+   * @param string $inputName Input name (displayed in case of error).
    * @return mixed
    * @throws InvalidInput
    */
@@ -55,8 +56,8 @@ class App
 
   /**
    * `APP` Returns a $_GET variable if it exists.
-   * @param \string $varName Variable name.
-   * @param \string $inputName Input name (displayed in case of error).
+   * @param string $varName Variable name.
+   * @param string $inputName Input name (displayed in case of error).
    * @return mixed
    * @throws InvalidInput
    */
@@ -68,7 +69,7 @@ class App
 
   /**
    * `APP` Redirects the user to a route.
-   * @param \string $url Route url.
+   * @param string $url Route url.
    * @return void
    */
   public static function redirect(string $url): void

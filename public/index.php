@@ -22,16 +22,19 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-session_start();
 
+use Dotenv\Dotenv;
 use Selection\Libs\App;
 use Selection\Libs\Router;
+
+session_start();
 
 require_once "../vendor/autoload.php";
 
 define("BASE_VIEW_PATH", dirname(__DIR__) . "/src/views/");
+define("APP_VERSION", "1.1.0");
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv = Dotenv::createImmutable(dirname(__DIR__));
 $dotenv->load();
 
 $router = new Router();
@@ -50,5 +53,13 @@ $router->register("/admin/deleteAccount", ["Selection\Controllers\AdminControlle
 
 $router->register("/secretary/home", ["Selection\Controllers\SecretaryController", "home", "Selection\Middlewares\SecretaryMiddleware"]);
 $router->register("/secretary/download", ["Selection\Controllers\SecretaryController", "download", "Selection\Middlewares\SecretaryMiddleware"]);
+
+$router->register("/teacher/home", ["Selection\Controllers\TeacherController", "home", "Selection\Middlewares\TeacherMiddleware"]);
+$router->register("/teacher/creation", ["Selection\Controllers\TeacherController", "creation", "Selection\Middlewares\TeacherMiddleware"]);
+$router->register("/teacher/insertGrid", ["Selection\Controllers\TeacherController", "insertGrid", "Selection\Middlewares\TeacherMiddleware"]);
+$router->register("/teacher/changes", ["Selection\Controllers\TeacherController", "changes", "Selection\Middlewares\TeacherMiddleware"]);
+$router->register("/teacher/updateGrid", ["Selection\Controllers\TeacherController", "updateGrid", "Selection\Middlewares\TeacherMiddleware"]);
+$router->register("/teacher/deletion", ["Selection\Controllers\TeacherController", "deletion", "Selection\Middlewares\TeacherMiddleware"]);
+$router->register("/teacher/deleteGrid", ["Selection\Controllers\TeacherController", "deleteGrid", "Selection\Middlewares\TeacherMiddleware"]);
 
 (new App($router, $_SERVER['REQUEST_URI']))->start();

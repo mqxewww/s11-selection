@@ -30,7 +30,7 @@ class AccountManager extends Manager
 
   /**
    * Returns a row from the account table into a class Account.
-   * @param \int $id Account id.
+   * @param int $id Account id.
    * @return Account
    * @throws DatabaseError|InvalidInput
    */

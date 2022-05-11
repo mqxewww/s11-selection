@@ -34,7 +34,7 @@ class SecretaryController
   }
 
   /**
-   * `API Call` Download the candidates' ranking in CSV format.
+   * `Backend Call` Download the candidates' ranking in CSV format.
    */
   public function download(): void
   {

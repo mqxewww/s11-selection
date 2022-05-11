@@ -87,15 +87,15 @@ class AdminController
   }
 
   /**
-   * `API Call` New account insertion.
+   * `Backend Call` New account insertion.
    */
   public function insertAccount(): void
   {
     try {
       $log = App::postFilter("newAccountLog", "Identifiant");
-      $pass = App::postFilter("newAccountLog", "Mot de passe");
-      $passConf = App::postFilter("newAccountLog", "Confirmation du mot de passe");
-      $type = App::postFilter("newAccountLog", "Type de compte");
+      $pass = App::postFilter("newAccountPwd", "Mot de passe");
+      $passConf = App::postFilter("newAccountPwdConf", "Confirmation du mot de passe");
+      $type = App::postFilter("newAccountType", "Type de compte");
 
       $account = new Account([
         "login" => $log,
@@ -118,7 +118,7 @@ class AdminController
   }
 
   /**
-   * `API Call` Account updates.
+   * `Backend Call` Account updates.
    */
   public function updateAccount(): void
   {
@@ -154,7 +154,7 @@ class AdminController
   }
 
   /**
-   * `API Call` Account deletion.
+   * `Backend Call` Account deletion.
    */
   public function deleteAccount(): void
   {

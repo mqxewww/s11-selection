@@ -1,9 +1,9 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@500&display=swap');
 
 html, body {
-  font-family: 'Questrial', sans-serif;
-  font-size: 14px;
-  font-weight: 300;
+  font-size: 15px;
+  font-family: 'Urbanist', sans-serif;
 }
 
 .hero.is-success {

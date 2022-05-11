@@ -2,6 +2,7 @@
 
 namespace Selection\Controllers;
 
+use Selection\Errors\DatabaseError;
 use Selection\Errors\InvalidInput;
 use Selection\Libs\App;
 use Selection\Models\AccountManager;
@@ -29,7 +30,7 @@ class AuthController
   }
 
   /**
-   * `API Call` User authentication.
+   * `Backend Call` User authentication.
    */
   public function authentication(): void
   {
@@ -42,7 +43,7 @@ class AuthController
       $_SESSION["auth"] = $account->getType();
       $_SESSION["user"] = $account->getLogin();
       $_SESSION["timestamp"] = time();
-    } catch (InvalidInput $e) {
+    } catch (InvalidInput | DatabaseError $e) {
       $_SESSION["error"] = $e->getMessage();
     } finally {
       App::redirect("/");
@@ -50,7 +51,7 @@ class AuthController
   }
 
   /**
-   * `API Call` User logout.
+   * `Backend Call` User logout.
    */
   public function logout(): void
   {

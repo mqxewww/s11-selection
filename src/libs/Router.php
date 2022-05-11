@@ -12,8 +12,8 @@ class Router
 
   /**
    * `Router` Registers a new route in the router.
-   * @param \string $path URI.
-   * @param array $action ...
+   * @param string $path URI.
+   * @param array $action (See `./public/index.php`)
    * @return void
    */
   public function register(string $path, array $action): void
@@ -23,7 +23,7 @@ class Router
 
   /**
    * `Router` Resolve the route to be used.
-   * @param \string $uri URI.
+   * @param string $uri URI.
    * @return mixed
    * @throws InvalidActionException|RouteNotFoundException
    */

@@ -161,7 +161,7 @@ class GridManager extends Manager
    * @return void
    * @throws DatabaseError|InvalidInput
    */
-  public function isNumberAvailable(string $num): void
+  public function verifyNumber(string $num): void
   {
     try {
       $stmt = $this->getDb()->prepare("SELECT * FROM grid");
