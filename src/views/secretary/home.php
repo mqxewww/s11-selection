@@ -11,6 +11,9 @@
 <?php if (isset($_SESSION["error"])) : ?>
   <p class="field is-size-5 has-text-red"><?= htmlspecialchars($_SESSION["error"]); ?></p>
 <?php endif; ?>
+<?php if (isset($_SESSION["success"])) : ?>
+  <p class="field is-size-5 has-text-green"><?= htmlspecialchars($_SESSION["success"]); ?></p>
+<?php endif; ?>
 
 <div class="columns is-multiline">
 
@@ -54,6 +57,14 @@
     </div>
   </div>
 
+</div>
+
+<div class="buttons are-small is-centered">
+  <?php if (isset($account)) : ?>
+    <a class="button" href="<?= $_ENV["WEB_URL"] . "common/change-password?accountId=" . $account->getId() ?>">
+      Changer mon mot de passe
+    </a>
+  <?php endif; ?>
 </div>
 
 <?php require_once BASE_VIEW_PATH . "components/footer.php"; ?>

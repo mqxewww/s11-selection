@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.2.0 (2022-05-12)
+
+> Changes on how to change the password of an account. On the administrator side, the password change has been separated to a new page (3rd column of the table). On the teacher and secretary side, they can change their password on their home page if they need to.
+> Added the project's github link in each view's footer.
+
 ## 1.1.1 (2022-05-12)
 
 > Added a 404 error page when a user visits a non-existent page and a 500 error page when the route has invalid parameters.

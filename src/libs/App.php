@@ -28,9 +28,9 @@ class App
       echo $this->router->resolve($this->requestUri);
     } catch (InvalidActionException | RouteNotFoundException $e) {
       if ($e->getCode() === 404) {
-        require_once BASE_VIEW_PATH . "others/routeNotFound.php";
+        require_once BASE_VIEW_PATH . "others/route-notfound.php";
       } else {
-        require_once BASE_VIEW_PATH . "others/invalidRoute.php";
+        require_once BASE_VIEW_PATH . "others/invalid-route.php";
       }
 
       $this->clearView();

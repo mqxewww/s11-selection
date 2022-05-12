@@ -42,6 +42,7 @@ class AuthController
 
       $_SESSION["auth"] = $account->getType();
       $_SESSION["user"] = $account->getLogin();
+      $_SESSION["id"] = $account->getId();
       $_SESSION["timestamp"] = time();
     } catch (InvalidInput | DatabaseError $e) {
       $_SESSION["error"] = $e->getMessage();
