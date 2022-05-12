@@ -84,21 +84,19 @@ class AccountManager extends Manager
    * @return void
    * @throws DatabaseError
    */
-  public function updateAccount(Account $account): void
+  public function updateAccountBase(Account $account): void
   {
     try {
       $stmt = $this->getDb()->prepare(
         "UPDATE account
         SET
           login = :log,
-          password = :pass,
           type = :type
         WHERE id = :id"
       );
       $stmt->execute([
         "id" => $account->getId(),
         "log" => $account->getLogin(),
-        "pass" => password_hash($account->getPassword(), PASSWORD_BCRYPT),
         "type" => $account->getType()
       ]);
     } catch (PDOException $e) {
@@ -120,6 +118,30 @@ class AccountManager extends Manager
         WHERE id = :id"
       );
       $stmt->execute(["id" => $id]);
+    } catch (PDOException $e) {
+      throw new DatabaseError($e->getMessage());
+    }
+  }
+
+  /**
+   * Update the password of an account.
+   * @param Account $account Account informations.
+   * @return void
+   * @throws DatabaseError
+   */
+  public function resetAccountPassword(Account $account): void
+  {
+    try {
+      $stmt = $this->getDb()->prepare(
+        "UPDATE account
+        SET
+          password = :pass
+        WHERE id = :id"
+      );
+      $stmt->execute([
+        "id" => $account->getId(),
+        "pass" => password_hash($account->getPassword(), PASSWORD_BCRYPT),
+      ]);
     } catch (PDOException $e) {
       throw new DatabaseError($e->getMessage());
     }

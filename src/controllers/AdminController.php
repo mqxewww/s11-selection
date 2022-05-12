@@ -87,6 +87,26 @@ class AdminController
   }
 
   /**
+   * `View Display` Admin > reset.
+   */
+  public function reset(): void
+  {
+    try {
+      $id = App::getFilter("accountId", "URL");
+
+      # Called in the view.
+      $account = $this::$accountManager->getOne(intval($id));
+    } catch (DatabaseError | InvalidInput $e) {
+      $_SESSION["error"] = $e->getMessage();
+      App::redirect("/admin/home");
+    }
+
+    require_once BASE_VIEW_PATH . "admin/reset.php";
+
+    App::clearView();
+  }
+
+  /**
    * `Backend Call` New account insertion.
    */
   public function insertAccount(): void
@@ -126,24 +146,18 @@ class AdminController
       $id = App::getFilter("accountId", "URL");
       $oldLog = App::postFilter("oldAccountLog", "Identifiant");
       $log = App::postFilter("modAccountLog", "Identifiant");
-      $pass = App::postFilter("modAccountPwd", "Mot de passe");
-      $passConf = App::postFilter("modAccountPwdConf", "Confirmation du mot de passe");
       $type = App::postFilter("modAccountType", "Type de compte");
 
       $account = new Account([
         "id" => intval($id),
         "login" => $log,
-        "password" => $pass,
         "type" => $type
       ]);
-
-      # If password & verification password are not equal.
-      if ($passConf !== $account->getPassword()) throw new NonMatchingPasswords();
 
       # If new login is different.
       if ($account->getLogin() !== $oldLog) $this::$accountManager->verifyLogin($account->getLogin());
 
-      $this::$accountManager->updateAccount($account);
+      $this::$accountManager->updateAccountBase($account);
     } catch (InvalidInput | NonMatchingPasswords | DatabaseError $e) {
       $_SESSION["error"] = $e->getMessage();
       App::redirect("/admin/changes?accountId=" . $_GET["accountId"]);
@@ -168,6 +182,34 @@ class AdminController
     }
 
     $_SESSION["success"] = "Compte supprimé !";
+    App::redirect("/admin/home");
+  }
+
+  /**
+   * `Backend Call` Account password reset.
+   */
+  public function resetPassword(): void
+  {
+    try {
+      $id = App::postFilter("resAccountId", "URL");
+      $pass = App::postFilter("newAccountPwd", "Mot de passe");
+      $passConf = App::postFilter("newAccountPwdConf", "Confirmation du mot de passe");
+
+      $account = new Account([
+        "id" => intval($id),
+        "password" => $pass,
+      ]);
+
+      # If password & verification password are not equal.
+      if ($passConf !== $account->getPassword()) throw new NonMatchingPasswords();
+
+      $this::$accountManager->resetAccountPassword($account);
+    } catch (InvalidInput | DatabaseError $e) {
+      $_SESSION["error"] = $e->getMessage();
+      App::redirect("/admin/reset?accountId=" . $_GET["accountId"]);
+    }
+
+    $_SESSION["success"] = "Mot de passe du compte modifié !";
     App::redirect("/admin/home");
   }
 }

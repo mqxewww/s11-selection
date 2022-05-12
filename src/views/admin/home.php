@@ -43,6 +43,7 @@
             <th><abbr title="Type du compte"></abbr>Type</th>
             <th><abbr title="Modifier le compte"></abbr>Modifier</th>
             <th><abbr title="Supprimer le compte"></abbr>Supprimer</th>
+            <th><abbr title="Réinitialiser le mot de passe"></abbr>Reset <i class="mdi mdi-lock-reset" aria-hidden="true"></i></th>
           </tr>
         </thead>
         <tbody>
@@ -60,6 +61,11 @@
                 <a class="field button is-block is-dark is-small" href="<?= $_ENV["WEB_URL"] . "admin/deletion?accountId=" . $account->getId() ?>">
                   Supprimer
                   <i class="mdi mdi-account-minus" aria-hidden="true"></i>
+                </a>
+              </td>
+              <td>
+                <a class="field button is-block is-dark is-small" href="<?= $_ENV["WEB_URL"] . "admin/reset?accountId=" . $account->getId() ?>">
+                  <i class="mdi mdi-lock-reset" aria-hidden="true"></i>
                 </a>
               </td>
             </tr>
