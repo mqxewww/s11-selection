@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.1.1 (2022-05-12)
+
+> Added a 404 error page when a user visits a non-existent page and a 500 error page when the route has invalid parameters.
+
 ## 1.1.0 (2022-05-11)
 
 > Application restructuring and use of composer for auto-loader and environment variables.
