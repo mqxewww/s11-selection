@@ -5,15 +5,18 @@ namespace Selection\Controllers;
 use Selection\Errors\DatabaseError;
 use Selection\Errors\InvalidInput;
 use Selection\Libs\App;
+use Selection\Models\AccountManager;
 use Selection\Models\Grid;
 use Selection\Models\GridManager;
 
 class TeacherController
 {
+  private static AccountManager $accountManager;
   private static GridManager $gridManager;
 
   public function __construct()
   {
+    $this::$accountManager = new AccountManager();
     $this::$gridManager = new GridManager();
   }
 
@@ -22,6 +25,13 @@ class TeacherController
    */
   public function home(): void
   {
+    try {
+      # Called in the view.
+      $account = $this::$accountManager->getOne($_SESSION["id"]);
+    } catch (DatabaseError $e) {
+      $_SESSION["error"] = $e->getMessage();
+    }
+
     try {
       # Called in the view.
       $list = $this::$gridManager->getList();

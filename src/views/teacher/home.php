@@ -75,4 +75,12 @@
 
 </div>
 
+<div class="buttons are-small is-centered">
+  <?php if (isset($account)) : ?>
+    <a class="button" href="<?= $_ENV["WEB_URL"] . "common/change-password?accountId=" . $account->getId() ?>">
+      Changer mon mot de passe
+    </a>
+  <?php endif; ?>
+</div>
+
 <?php require_once BASE_VIEW_PATH . "components/footer.php"; ?>

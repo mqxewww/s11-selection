@@ -37,16 +37,6 @@
       </div>
 
       <div class="field">
-        <label class="label">Mot de passe</label>
-        <input class="input is-medium" name="modAccountPwd" type="password" minlength="12" required />
-      </div>
-
-      <div class="field">
-        <label class="label">Confirmation du mot de passe</label>
-        <input class="input is-medium" name="modAccountPwdConf" type="password" minlength="12" required />
-      </div>
-
-      <div class="field">
         <label class="label">Type de compte</label>
         <div class="select is-medium is-fullwidth">
           <select name="modAccountType" required>

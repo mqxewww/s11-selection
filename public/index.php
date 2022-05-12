@@ -32,12 +32,15 @@ session_start();
 require_once "../vendor/autoload.php";
 
 define("BASE_VIEW_PATH", dirname(__DIR__) . "/src/views/");
-define("APP_VERSION", "1.1.0");
+define("APP_VERSION", "1.2.0");
 
 $dotenv = Dotenv::createImmutable(dirname(__DIR__));
 $dotenv->load();
 
 $router = new Router();
+
+$router->register("/common/change-password", ["Selection\Controllers\CommonController", "changePassword", "Selection\Middlewares\CommonMiddleware"]);
+$router->register("/common/updateAccountPassword", ["Selection\Controllers\CommonController", "updateAccountPassword", "Selection\Middlewares\CommonMiddleware"]);
 
 $router->register("/", ["Selection\Controllers\AuthController", "index", ""]);
 $router->register("/authentication", ["Selection\Controllers\AuthController", "authentication", ""]);
@@ -50,6 +53,8 @@ $router->register("/admin/changes", ["Selection\Controllers\AdminController", "c
 $router->register("/admin/updateAccount", ["Selection\Controllers\AdminController", "updateAccount", "Selection\Middlewares\AdminMiddleware"]);
 $router->register("/admin/deletion", ["Selection\Controllers\AdminController", "deletion", "Selection\Middlewares\AdminMiddleware"]);
 $router->register("/admin/deleteAccount", ["Selection\Controllers\AdminController", "deleteAccount", "Selection\Middlewares\AdminMiddleware"]);
+$router->register("/admin/reset", ["Selection\Controllers\AdminController", "reset", "Selection\Middlewares\AdminMiddleware"]);
+$router->register("/admin/resetPassword", ["Selection\Controllers\AdminController", "resetPassword", "Selection\Middlewares\AdminMiddleware"]);
 
 $router->register("/secretary/home", ["Selection\Controllers\SecretaryController", "home", "Selection\Middlewares\SecretaryMiddleware"]);
 $router->register("/secretary/download", ["Selection\Controllers\SecretaryController", "download", "Selection\Middlewares\SecretaryMiddleware"]);
