@@ -1,5 +1,5 @@
 <p id="copyright" class="has-text-grey"></p>
-<a target="__blank" href="https://github.com/25thMaxouuu/s11-selection" class="has-text-grey">Page du projet GitHub</a>
+<a target="__blank" href="https://github.com/mqxewww/s11-selection" class="has-text-grey">Page du projet GitHub</a>
 </div>
 </div>
 </div>

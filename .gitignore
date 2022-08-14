@@ -2,8 +2,9 @@
 vendor
 composer.lock
 
-# VSCode
+# VSCode local files
 .vscode
+.markdownlint.json
 
 # Environment variables
 *.env
