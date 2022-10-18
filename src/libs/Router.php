@@ -18,7 +18,8 @@ class Router
    */
   public function register(string $path, array $action): void
   {
-    $this->routes[$path] = $action;
+    $fullpath = $_ENV["PATH_TO_INDEX"] . $path;
+    $this->routes[$fullpath] = $action;
   }
 
   /**

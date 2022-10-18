@@ -19,15 +19,15 @@
 
   <div class="column is-one-quarter">
     <div class="box">
-      <a class="field button is-block is-dark is-medium" href="<?= $_ENV["WEB_URL"] . "logout" ?>">
+      <a class="field button is-block is-dark is-medium" href="<?= $_ENV["PATH_TO_INDEX"] . "logout" ?>">
         Se déconnecter
         <i class="mdi mdi-logout" aria-hidden="true"></i>
       </a>
-      <a class="field button is-block is-dark is-medium" href="<?= $_ENV["WEB_URL"] ?>">
+      <a class="field button is-block is-dark is-medium" href="<?= $_ENV["PATH_TO_INDEX"] ?>">
         Accueil
         <i class="mdi mdi-home" aria-hidden="true"></i>
       </a>
-      <a class="field button is-block is-dark is-medium" href="<?= $_ENV["WEB_URL"] . "teacher/creation" ?>">
+      <a class="field button is-block is-dark is-medium" href="<?= $_ENV["PATH_TO_INDEX"] . "teacher/creation" ?>">
         Nouvelle grille
         <i class="mdi mdi-book-plus" aria-hidden="true"></i>
       </a>
@@ -55,13 +55,13 @@
               <td><?= $grid->getFirstname(); ?></td>
               <th><?= $grid->getMark(); ?></th>
               <td>
-                <a class="field button is-block is-dark is-small" href="<?= $_ENV["WEB_URL"] . "teacher/changes?gridId=" . $grid->getId() ?>">
+                <a class="field button is-block is-dark is-small" href="<?= $_ENV["PATH_TO_INDEX"] . "teacher/changes?gridId=" . $grid->getId() ?>">
                   Modifier
                   <i class="mdi mdi-book-edit" aria-hidden="true"></i>
                 </a>
               </td>
               <td>
-                <a class="field button is-block is-dark is-small" href="<?= $_ENV["WEB_URL"] . "teacher/deletion?gridId=" . $grid->getId() ?>">
+                <a class="field button is-block is-dark is-small" href="<?= $_ENV["PATH_TO_INDEX"] . "teacher/deletion?gridId=" . $grid->getId() ?>">
                   Supprimer
                   <i class="mdi mdi-book-minus" aria-hidden="true"></i>
                 </a>
@@ -77,7 +77,7 @@
 
 <div class="buttons are-small is-centered">
   <?php if (isset($account)) : ?>
-    <a class="button" href="<?= $_ENV["WEB_URL"] . "common/change-password?accountId=" . $account->getId() ?>">
+    <a class="button" href="<?= $_ENV["PATH_TO_INDEX"] . "common/change-password?accountId=" . $account->getId() ?>">
       Changer mon mot de passe
     </a>
   <?php endif; ?>

@@ -58,7 +58,7 @@ class AdminController
       $account = $this::$accountManager->getOne(intval($id));
     } catch (DatabaseError | InvalidInput $e) {
       $_SESSION["error"] = $e->getMessage();
-      App::redirect("/admin/home");
+      App::redirect("admin/home");
     }
 
     require_once BASE_VIEW_PATH . "admin/changes.php";
@@ -78,7 +78,7 @@ class AdminController
       $account = $this::$accountManager->getOne(intval($id));
     } catch (DatabaseError | InvalidInput $e) {
       $_SESSION["error"] = $e->getMessage();
-      App::redirect("/admin/home");
+      App::redirect("admin/home");
     }
 
     require_once BASE_VIEW_PATH . "admin/deletion.php";
@@ -98,7 +98,7 @@ class AdminController
       $account = $this::$accountManager->getOne(intval($id));
     } catch (DatabaseError | InvalidInput $e) {
       $_SESSION["error"] = $e->getMessage();
-      App::redirect("/admin/home");
+      App::redirect("admin/home");
     }
 
     require_once BASE_VIEW_PATH . "admin/reset.php";
@@ -130,11 +130,11 @@ class AdminController
       $this::$accountManager->createAccount($account);
     } catch (InvalidInput | NonMatchingPasswords | DatabaseError $e) {
       $_SESSION["error"] = $e->getMessage();
-      App::redirect("/admin/creation");
+      App::redirect("admin/creation");
     }
 
     $_SESSION["success"] = "Compte créé avec succès !";
-    App::redirect("/admin/home");
+    App::redirect("admin/home");
   }
 
   /**
@@ -160,11 +160,11 @@ class AdminController
       $this::$accountManager->updateAccountBase($account);
     } catch (InvalidInput | NonMatchingPasswords | DatabaseError $e) {
       $_SESSION["error"] = $e->getMessage();
-      App::redirect("/admin/changes?accountId=" . $_GET["accountId"]);
+      App::redirect("admin/changes?accountId=" . $_GET["accountId"]);
     }
 
     $_SESSION["success"] = "Compte mis à jour !";
-    App::redirect("/admin/home");
+    App::redirect("admin/home");
   }
 
   /**
@@ -178,11 +178,11 @@ class AdminController
       $this::$accountManager->deleteAccount(intval($id));
     } catch (InvalidInput | DatabaseError $e) {
       $_SESSION["error"] = $e->getMessage();
-      App::redirect("/admin/deletion?accountId=" . $_GET["accountId"]);
+      App::redirect("admin/deletion?accountId=" . $_GET["accountId"]);
     }
 
     $_SESSION["success"] = "Compte supprimé !";
-    App::redirect("/admin/home");
+    App::redirect("admin/home");
   }
 
   /**
@@ -206,10 +206,10 @@ class AdminController
       $this::$accountManager->resetAccountPassword($account);
     } catch (InvalidInput | DatabaseError $e) {
       $_SESSION["error"] = $e->getMessage();
-      App::redirect("/admin/reset?accountId=" . $_GET["accountId"]);
+      App::redirect("admin/reset?accountId=" . $_GET["accountId"]);
     }
 
     $_SESSION["success"] = "Mot de passe du compte modifié !";
-    App::redirect("/admin/home");
+    App::redirect("admin/home");
   }
 }

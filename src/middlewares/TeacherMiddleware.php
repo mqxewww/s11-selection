@@ -8,7 +8,7 @@ class TeacherMiddleware
 {
   public function __construct()
   {
-    if (empty($_SESSION["auth"])) App::redirect("/");
-    if ($_SESSION["auth"] !== "teacher") App::redirect("/");
+    if (empty($_SESSION["auth"])) App::redirect("");
+    if ($_SESSION["auth"] !== "teacher") App::redirect("");
   }
 }

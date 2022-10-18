@@ -5,6 +5,6 @@
 </div>
 </div>
 </body>
-<script type="text/javascript" src="<?= $_ENV["WEB_URL"] ?>scripts/footerCurrentYear.js"></script>
+<script type="text/javascript" src="<?= $_ENV["PATH_TO_INDEX"] ?>scripts/footerCurrentYear.js"></script>
 
 </html>

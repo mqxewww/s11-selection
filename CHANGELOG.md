@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.3.0 (2022-10-18)
+
+> Fixed a bug where the PATH_TO_INDEX environment variable did not work if its value was different from "/".
+
 ## 1.2.0 (2022-05-12)
 
 > Changes on how to change the password of an account. On the administrator side, the password change has been separated to a new page (3rd column of the table). On the teacher and secretary side, they can change their password on their home page if they need to.

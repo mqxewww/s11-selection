@@ -19,15 +19,15 @@
 
   <div class="column is-one-quarter">
     <div class="box">
-      <a class="field button is-block is-dark is-medium" href="<?= $_ENV["WEB_URL"] . "logout" ?>">
+      <a class="field button is-block is-dark is-medium" href="<?= $_ENV["PATH_TO_INDEX"] . "logout" ?>">
         Se déconnecter
         <i class="mdi mdi-logout" aria-hidden="true"></i>
       </a>
-      <a class="field button is-block is-dark is-medium" href="<?= $_ENV["WEB_URL"] ?>">
+      <a class="field button is-block is-dark is-medium" href="<?= $_ENV["PATH_TO_INDEX"] ?>">
         Accueil
         <i class="mdi mdi-home" aria-hidden="true"></i>
       </a>
-      <a class="field button is-block is-dark is-medium" href="<?= $_ENV["WEB_URL"] . "admin/creation" ?>">
+      <a class="field button is-block is-dark is-medium" href="<?= $_ENV["PATH_TO_INDEX"] . "admin/creation" ?>">
         Nouveau compte
         <i class="mdi mdi-account-plus" aria-hidden="true"></i>
       </a>
@@ -52,19 +52,19 @@
               <th><?= $account->getLogin(); ?></th>
               <td><?= $account->getType(); ?></td>
               <td>
-                <a class="field button is-block is-dark is-small" href="<?= $_ENV["WEB_URL"] . "admin/changes?accountId=" . $account->getId() ?>">
+                <a class="field button is-block is-dark is-small" href="<?= $_ENV["PATH_TO_INDEX"] . "admin/changes?accountId=" . $account->getId() ?>">
                   Modifier
                   <i class="mdi mdi-account-edit" aria-hidden="true"></i>
                 </a>
               </td>
               <td>
-                <a class="field button is-block is-dark is-small" href="<?= $_ENV["WEB_URL"] . "admin/deletion?accountId=" . $account->getId() ?>">
+                <a class="field button is-block is-dark is-small" href="<?= $_ENV["PATH_TO_INDEX"] . "admin/deletion?accountId=" . $account->getId() ?>">
                   Supprimer
                   <i class="mdi mdi-account-minus" aria-hidden="true"></i>
                 </a>
               </td>
               <td>
-                <a class="field button is-block is-dark is-small" href="<?= $_ENV["WEB_URL"] . "admin/reset?accountId=" . $account->getId() ?>">
+                <a class="field button is-block is-dark is-small" href="<?= $_ENV["PATH_TO_INDEX"] . "admin/reset?accountId=" . $account->getId() ?>">
                   <i class="mdi mdi-lock-reset" aria-hidden="true"></i>
                 </a>
               </td>

@@ -16,11 +16,11 @@
 
   <div class="column is-one-quarter">
     <div class="box">
-      <a class="field button is-block is-dark is-medium" href="<?= $_ENV["WEB_URL"] . "logout" ?>">
+      <a class="field button is-block is-dark is-medium" href="<?= $_ENV["PATH_TO_INDEX"] . "logout" ?>">
         Se déconnecter
         <i class="mdi mdi-logout" aria-hidden="true"></i>
       </a>
-      <a class="field button is-block is-dark is-medium" href="<?= $_ENV["WEB_URL"] ?>">
+      <a class="field button is-block is-dark is-medium" href="<?= $_ENV["PATH_TO_INDEX"] ?>">
         Accueil
         <i class="mdi mdi-home" aria-hidden="true"></i>
       </a>
@@ -28,7 +28,7 @@
   </div>
 
   <div class="column">
-    <form action="<?= $_ENV["WEB_URL"] . "admin/resetPassword?accountId=" . $_GET["accountId"] ?>" method="POST" class="box">
+    <form action="<?= $_ENV["PATH_TO_INDEX"] . "admin/resetPassword?accountId=" . $_GET["accountId"] ?>" method="POST" class="box">
       <input type="text" name="resAccountId" value=<?= $account->getId() ?> hidden>
 
       <div class="field">

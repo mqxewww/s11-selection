@@ -29,10 +29,10 @@ class CommonController
       $account = $this::$accountManager->getOne(intval($id));
 
       # Make sure that the user can only modify his account.
-      if ($account->getId() !== $_SESSION["id"]) App::redirect("/");
+      if ($account->getId() !== $_SESSION["id"]) App::redirect("");
     } catch (DatabaseError | InvalidInput $e) {
       $_SESSION["error"] = $e->getMessage();
-      App::redirect("/");
+      App::redirect("");
     }
 
     require_once BASE_VIEW_PATH . "/common/change-password.php";
@@ -67,10 +67,10 @@ class CommonController
       $this::$accountManager->resetAccountPassword($account);
     } catch (InvalidInput | NonMatchingPasswords | DatabaseError $e) {
       $_SESSION["error"] = $e->getMessage();
-      App::redirect("/common/change-password?accountId=" . $_GET["accountId"]);
+      App::redirect("common/change-password?accountId=" . $_GET["accountId"]);
     }
 
     $_SESSION["success"] = "Mot de passe du compte modifié !";
-    App::redirect("/");
+    App::redirect("");
   }
 }

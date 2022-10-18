@@ -14,7 +14,7 @@ class AppMiddleware
       if (time() - $_SESSION["timestamp"] > 1200) {
         session_unset();
         $_SESSION["error"] = "Erreur : Vous avez été déconnecté pour inactivité. (+ de 20 minutes)";
-        App::redirect("/");
+        App::redirect("");
       }
 
       # Reset session timestamp.

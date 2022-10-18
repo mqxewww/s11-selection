@@ -11,7 +11,7 @@
   <p class="field is-size-5 has-text-red"><?= htmlspecialchars($_SESSION["error"]); ?></p>
 <?php endif; ?>
 
-<form action="<?= $_ENV["WEB_URL"] . "authentication" ?>" method="POST" class="box">
+<form action="<?= $_ENV["PATH_TO_INDEX"] . "authentication" ?>" method="POST" class="box">
   <div class="field">
     <label class="label">Identifiant</label>
     <input class="input is-medium" name="accountLog" type="text" required />

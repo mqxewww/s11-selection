@@ -22,7 +22,7 @@ class AuthController
   public function index(): void
   {
     # User redirection if already logged in.
-    if (!empty($_SESSION["auth"])) App::redirect("/" . $_SESSION["auth"] . "/home");
+    if (!empty($_SESSION["auth"])) App::redirect("" . $_SESSION["auth"] . "/home");
 
     require_once BASE_VIEW_PATH . "auth/index.php";
 
@@ -47,7 +47,7 @@ class AuthController
     } catch (InvalidInput | DatabaseError $e) {
       $_SESSION["error"] = $e->getMessage();
     } finally {
-      App::redirect("/");
+      App::redirect("");
     }
   }
 
@@ -57,6 +57,6 @@ class AuthController
   public function logout(): void
   {
     session_destroy();
-    App::redirect("/");
+    App::redirect("");
   }
 }

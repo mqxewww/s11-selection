@@ -19,11 +19,11 @@
 
   <div class="column is-one-quarter">
     <div class="box">
-      <a class="field button is-block is-dark is-medium" href="<?= $_ENV["WEB_URL"] . "logout" ?>">
+      <a class="field button is-block is-dark is-medium" href="<?= $_ENV["PATH_TO_INDEX"] . "logout" ?>">
         Se déconnecter
         <i class="mdi mdi-logout" aria-hidden="true"></i>
       </a>
-      <a class="field button is-block is-dark is-medium" href="<?= $_ENV["WEB_URL"] . "secretary/download" ?>">
+      <a class="field button is-block is-dark is-medium" href="<?= $_ENV["PATH_TO_INDEX"] . "secretary/download" ?>">
         Classement format CSV
         <i class="mdi mdi-download" aria-hidden="true"></i>
       </a>
@@ -61,7 +61,7 @@
 
 <div class="buttons are-small is-centered">
   <?php if (isset($account)) : ?>
-    <a class="button" href="<?= $_ENV["WEB_URL"] . "common/change-password?accountId=" . $account->getId() ?>">
+    <a class="button" href="<?= $_ENV["PATH_TO_INDEX"] . "common/change-password?accountId=" . $account->getId() ?>">
       Changer mon mot de passe
     </a>
   <?php endif; ?>

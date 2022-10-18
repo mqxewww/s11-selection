@@ -15,11 +15,11 @@
 
   <div class="column is-one-quarter">
     <div class="box">
-      <a class="field button is-block is-dark is-medium" href="<?= $_ENV["WEB_URL"] . "logout" ?>">
+      <a class="field button is-block is-dark is-medium" href="<?= $_ENV["PATH_TO_INDEX"] . "logout" ?>">
         Se déconnecter
         <i class="mdi mdi-logout" aria-hidden="true"></i>
       </a>
-      <a class="field button is-block is-dark is-medium" href="<?= $_ENV["WEB_URL"] ?>">
+      <a class="field button is-block is-dark is-medium" href="<?= $_ENV["PATH_TO_INDEX"] ?>">
         Accueil
         <i class="mdi mdi-home" aria-hidden="true"></i>
       </a>
@@ -27,7 +27,7 @@
   </div>
 
   <div class="column">
-    <form action="<?= $_ENV["WEB_URL"] . "common/updateAccountPassword?accountId=" . $account->getId() ?>" method="POST" class="box">
+    <form action="<?= $_ENV["PATH_TO_INDEX"] . "common/updateAccountPassword?accountId=" . $account->getId() ?>" method="POST" class="box">
       <div class="field">
         <label class="label">Ancien mot de passe</label>
         <input class="input is-medium" name="oldAccountPwd" type="password" required />

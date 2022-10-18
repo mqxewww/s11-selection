@@ -80,7 +80,7 @@ class App
    */
   public static function redirect(string $url): void
   {
-    header("Location: " . $url);
+    header("Location: " . $_ENV["PATH_TO_INDEX"] . $url);
     exit;
   }
 }

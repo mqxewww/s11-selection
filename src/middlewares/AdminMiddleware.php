@@ -8,7 +8,7 @@ class AdminMiddleware
 {
   public function __construct()
   {
-    if (empty($_SESSION["auth"])) App::redirect("/");
-    if ($_SESSION["auth"] !== "admin") App::redirect("/");
+    if (empty($_SESSION["auth"])) App::redirect("");
+    if ($_SESSION["auth"] !== "admin") App::redirect("");
   }
 }

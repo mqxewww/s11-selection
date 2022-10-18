@@ -67,7 +67,7 @@ class TeacherController
       $grid = $this::$gridManager->getOne(intval($id));
     } catch (DatabaseError | InvalidInput $e) {
       $_SESSION["error"] = $e->getMessage();
-      App::redirect("/teacher/home");
+      App::redirect("teacher/home");
     }
 
     require_once BASE_VIEW_PATH . "teacher/changes.php";
@@ -87,7 +87,7 @@ class TeacherController
       $grid = $this::$gridManager->getOne(intval($id));
     } catch (DatabaseError | InvalidInput $e) {
       $_SESSION["error"] = $e->getMessage();
-      App::redirect("/teacher/home");
+      App::redirect("teacher/home");
     }
 
     require_once BASE_VIEW_PATH . "teacher/deletion.php";
@@ -134,11 +134,11 @@ class TeacherController
       $this::$gridManager->createGrid($grid);
     } catch (InvalidInput | DatabaseError $e) {
       $_SESSION["error"] = $e->getMessage();
-      App::redirect("/teacher/creation");
+      App::redirect("teacher/creation");
     }
 
     $_SESSION["success"] = "Grille créée avec succès !";
-    App::redirect("/teacher/home");
+    App::redirect("teacher/home");
   }
 
   /**
@@ -185,11 +185,11 @@ class TeacherController
       $this::$gridManager->updateGrid($grid);
     } catch (InvalidInput | DatabaseError $e) {
       $_SESSION["error"] = $e->getMessage();
-      App::redirect("/teacher/changes?gridId=" . $_GET["gridId"]);
+      App::redirect("teacher/changes?gridId=" . $_GET["gridId"]);
     }
 
     $_SESSION["success"] = "Grille mise à jour !";
-    App::redirect("/teacher/home");
+    App::redirect("teacher/home");
   }
 
   /**
@@ -203,10 +203,10 @@ class TeacherController
       $this::$gridManager->deleteGrid(intval($id));
     } catch (InvalidInput | DatabaseError $e) {
       $_SESSION["error"] = $e->getMessage();
-      App::redirect("/teacher/deletion?gridId=" . $_GET["gridId"]);
+      App::redirect("teacher/deletion?gridId=" . $_GET["gridId"]);
     }
 
     $_SESSION["success"] = "Grille supprimée !";
-    App::redirect("/teacher/home");
+    App::redirect("teacher/home");
   }
 }
