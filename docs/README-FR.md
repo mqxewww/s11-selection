@@ -2,11 +2,23 @@
 
 S11 Selection est une solution web PHP faite pour automatiser la création d'une grille d'évaluation d'un étudiant puis de les rassembler pour en faire un classement. Cette application est un projet d'école individuel fait lors de ma première année.
 
-Pour mettre en place le projet, utilisez le fichier SQL prêt à importer `./docs/selection.sql`. Les trois comptes sont `admin/admin`, `teacher/teacher` et `secr/secr`.\
-Ensuite téléchargez les dépendances avec composer, créez un fichier `.env` à partir de `.env.template` puis complétez le, et assurez vous d'utiliser au minimum la version 8 de PHP.\
+## Installation :rocket:
+
+> Vous devez avoir Composer et PHP8 d'installés sur votre système.
+
+Pour mettre en place la base de donnée mySQL, utilisez le fichier SQL prêt à importer `./docs/selection.sql`. Les trois comptes sont `admin/admin`, `teacher/teacher` et `secr/secr`.
+
+Ensuite, exécutez les commandes suivantes :
+
+```
+composer install
+composer dump-autoload
+```
+
+Enfin, créez un fichier `.env` à partir de `.env.template` puis complétez le.\
 L'application est ensuite prête à être utilisée.
 
-## Caractéristiques
+## Caractéristiques :sparkles:
 
 - [x] Portail d'authentification
 - [x] Espace évaluateur :
@@ -20,7 +32,7 @@ L'application est ensuite prête à être utilisée.
   - [x] Modifier un compte
   - [x] Supprimer un compte
 
-## Plus d'infos sur S11-Selection
+## Plus d'infos sur S11-Selection :memo:
 
 [![Release](https://img.shields.io/github/v/release/mqxewww/s11-selection?label=latest%20release&logo=git&logoColor=white&style=for-the-badge)](https://github.com/mqxewww/s11-selection/releases)
 [![Top language](https://img.shields.io/github/languages/top/mqxewww/s11-selection?color=777BB4&logo=php&logoColor=white&style=for-the-badge)](https://github.com/mqxewww/s11-selection/search?l=php)

@@ -1,14 +1,26 @@
 # S11-Selection <img href="https://github.com/mqxewww/s11-selection" src="https://raw.githubusercontent.com/mqxewww/s11-selection/main/public/assets/images/icones8-favicon.png" width="80px" alt="Selection BTS logo" align="right">
 
-*[French version](https://github.com/mqxewww/s11-selection/blob/main/docs/README-FR.md)*. :bookmark:
+*[French version](https://github.com/mqxewww/s11-selection/blob/main/docs/README-FR.md)*. :memo:
 
 S11 Selection is a PHP web solution designed to automate the creation of a student's evaluation grid and then gather them to make a ranking. This application is an individual school project done during my first year.
 
-To set up the project, use the import-ready SQL file `./docs/selection.sql`. The three accounts are `admin/admin`, `teacher/teacher` and `secr/secr`.\
-Then download the dependencies with composer, create a `.env` file from `.env.template` and complete it, and make sure you use at least PHP version 8.\
+## Setup :rocket:
+
+> You need to have Composer and PHP8 installed on your system.
+
+To set up the mySQL database, use the import-ready SQL file `./docs/selection.sql`. The three accounts are `admin/admin`, `teacher/teacher` and `secr/secr`.
+
+Then run the following commands:
+
+```
+composer install
+composer dump-autoload
+```
+
+Finally, create a `.env` file from `.env.template` and complete it.\
 The application is then ready to use.
 
-## Features
+## Features :sparkles:
 
 - [x] Authentication portal
 - [x] Evaluator's area :
@@ -22,7 +34,7 @@ The application is then ready to use.
   - [x] Update an account
   - [x] Delete an account
 
-## More about S11-Selection
+## More about S11-Selection :memo:
 
 [![Release](https://img.shields.io/github/v/release/mqxewww/s11-selection?label=latest%20release&logo=git&logoColor=white&style=for-the-badge)](https://github.com/mqxewww/s11-selection/releases)
 [![Top language](https://img.shields.io/github/languages/top/mqxewww/s11-selection?color=777BB4&logo=php&logoColor=white&style=for-the-badge)](https://github.com/mqxewww/s11-selection/search?l=php)
