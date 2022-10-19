@@ -22,6 +22,6 @@
   ],
   "minimum-stability": "stable",
   "require": {
-    "vlucas/phpdotenv": "^5.4"
+    "vlucas/phpdotenv": "^5.5.0"
   }
 }
