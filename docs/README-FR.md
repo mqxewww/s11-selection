@@ -6,17 +6,9 @@ S11 Selection est une solution web PHP faite pour automatiser la création d'une
 
 > Vous devez avoir Composer et PHP8 d'installés sur votre système.
 
-Pour mettre en place la base de donnée mySQL, utilisez le fichier SQL prêt à importer `./docs/selection.sql`. Les trois comptes sont `admin/admin`, `teacher/teacher` et `secr/secr`.
+Pour mettre en place la base de donnée mySQL, utilisez le fichier SQL prêt à importer `./docs/selection.sql`. Les trois comptes `id/pass` sont `admin/admin`, `teacher/teacher` et `secr/secr`.
 
-Ensuite, exécutez les commandes suivantes :
-
-```
-composer install
-composer dump-autoload
-```
-
-Enfin, créez un fichier `.env` à partir de `.env.template` puis complétez le.\
-L'application est ensuite prête à être utilisée.
+Pour l'application PHP, éxecutez le fichier `setup.sh` et suivez les instructions.
 
 ## Caractéristiques :sparkles:
 
