@@ -62,6 +62,6 @@ if [ "$installChoice" == "${installMethods[0]}" ] ; then
   printf "${SUCCESS_COLOR}✓ S11-Selection v1.3.0 configuration complete.${NO_COLOR}\n"
 
 elif [ "$installChoice" == "${installMethods[1]}" ] ; then
-  printf "\n${INFO_COLOR}🛈 Copy the .env.template file and rename it .env."
+  printf "\n${INFO_COLOR}🛈 Copy the .template.env file and rename it .env."
   printf "\n${INFO_COLOR}🛈 Then replace the variables with your owns. The application is then ready to use."
 fi
