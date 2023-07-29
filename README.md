@@ -6,6 +6,8 @@ _[French version](https://github.com/mqxewww/s11-selection/blob/main/docs/README
 
 **This project was developed during my school years. It is not intended for production use, and is not maintained. This is a public project with the sole purpose of demonstrating my skills.**
 
+## Description :pencil2:
+
 s11-selection is a PHP web solution designed to automate the creation of a student's evaluation grid and then gather them to make a ranking.
 
 ## Setup :rocket:

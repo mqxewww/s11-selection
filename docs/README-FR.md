@@ -1,10 +1,12 @@
 # s11-selection <img href="https://github.com/mqxewww/s11-selection" src="https://raw.githubusercontent.com/mqxewww/s11-selection/main/public/assets/images/icones8-favicon.png" width="80px" alt="selection BTS logo" align="right">
 
-s11-selection est une solution web PHP faite pour automatiser la création d'une grille d'évaluation d'un étudiant puis de les rassembler pour en faire un classement.
-
 ## Avertissement :warning:
 
 **Ce projet a été développé pendant ma scolarité. Il n'est pas destiné a être utilisé en production, et n'est pas maintenu. Ce projet est public dans l'unique contexte de montrer mes compétences.**
+
+## Description :pencil2:
+
+s11-selection est une solution web PHP faite pour automatiser la création d'une grille d'évaluation d'un étudiant puis de les rassembler pour en faire un classement.
 
 ## Installation :rocket:
 
