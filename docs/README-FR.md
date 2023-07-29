@@ -1,6 +1,10 @@
-# S11-Selection <img href="https://github.com/mqxewww/s11-selection" src="https://raw.githubusercontent.com/mqxewww/s11-selection/main/public/assets/images/icones8-favicon.png" width="80px" alt="Selection BTS logo" align="right">
+# s11-selection <img href="https://github.com/mqxewww/s11-selection" src="https://raw.githubusercontent.com/mqxewww/s11-selection/main/public/assets/images/icones8-favicon.png" width="80px" alt="selection BTS logo" align="right">
 
-S11 Selection est une solution web PHP faite pour automatiser la création d'une grille d'évaluation d'un étudiant puis de les rassembler pour en faire un classement. Cette application est un projet d'école individuel fait lors de ma première année.
+s11-selection est une solution web PHP faite pour automatiser la création d'une grille d'évaluation d'un étudiant puis de les rassembler pour en faire un classement.
+
+## Avertissement :warning:
+
+**Ce projet a été développé pendant ma scolarité. Il n'est pas destiné a être utilisé en production, et n'est pas maintenu. Ce projet est public dans l'unique contexte de montrer mes compétences.**
 
 ## Installation :rocket:
 
@@ -24,7 +28,7 @@ Pour l'application PHP, éxecutez le fichier `setup.sh` et suivez les instructio
   - [x] Modifier un compte
   - [x] Supprimer un compte
 
-## Plus d'infos sur S11-Selection :memo:
+## Plus d'infos sur s11-selection :memo:
 
 [![Release](https://img.shields.io/github/v/release/mqxewww/s11-selection?label=latest%20release&logo=git&logoColor=white&style=for-the-badge)](https://github.com/mqxewww/s11-selection/releases)
 [![Top language](https://img.shields.io/github/languages/top/mqxewww/s11-selection?color=777BB4&logo=php&logoColor=white&style=for-the-badge)](https://github.com/mqxewww/s11-selection/search?l=php)
@@ -35,4 +39,4 @@ Pour l'application PHP, éxecutez le fichier `setup.sh` et suivez les instructio
 :pencil2: Utilisation du framework CSS **[Bulma](https://bulma.io/documentation/overview/start/)**.\
 :arrow_forward: Icone de l'application venant de **[Icons8](https://icons8.com/icon/64044/grille)**.
 
-~ mqxewww, 2021-2022
+~ mqxewww, 2021-2023

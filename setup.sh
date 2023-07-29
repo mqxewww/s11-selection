@@ -3,7 +3,7 @@ INFO_COLOR="\033[0;34m"
 NO_COLOR="\033[0m"
 SUCCESS_COLOR="\033[0;32m"
 
-printf "${INFO_COLOR}Configuration of S11-Selection v1.3.0 :${NO_COLOR}\n"
+printf "${INFO_COLOR}Configuration of s11-selection v1.3.0 :${NO_COLOR}\n"
 printf "${INFO_COLOR}🛈 Fetching...${NO_COLOR}\n"
 
 source <(curl -s https://files.mqxewww.dev/get-choice.sh)
@@ -59,7 +59,7 @@ if [ "$installChoice" == "${installMethods[0]}" ] ; then
 
   printf "\n${SUCCESS_COLOR}✓ Docker image succesfully created.${NO_COLOR}\n"
   printf "${INFO_COLOR}🛈 Run your container with docker run -p 80:80 --env-file .env mqxewww/s11-selection:1.3.0\n"
-  printf "${SUCCESS_COLOR}✓ S11-Selection v1.3.0 configuration complete.${NO_COLOR}\n"
+  printf "${SUCCESS_COLOR}✓ s11-selection v1.3.0 configuration complete.${NO_COLOR}\n"
 
 elif [ "$installChoice" == "${installMethods[1]}" ] ; then
   printf "\n${INFO_COLOR}🛈 Copy the .template.env file and rename it .env."
